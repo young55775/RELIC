@@ -230,7 +230,7 @@ We encourage researchers to read through the training logic (especially the hier
 
 ## 📜 Citation
 If you find our model, representations, or the experimental discovery datasets useful, please cite our preprint:
-
+```
 @article{guo2026relic,
   title={Hierarchical latent representations reveal protein organization for functional discovery and design},
   author={Guo, Zhengyang and Wang, Zi and Wang, Shimin and Chai, Yongping and Xu, Kaiming and Li, Ming and Li, Wei and Ou, Guangshuo},
@@ -238,7 +238,7 @@ If you find our model, representations, or the experimental discovery datasets u
   year={2026},
   doi={Pending}
 }
-
+```
 ## ⚠️ License & Commercial Use
 * **Experimental Data:** Released under **CC BY 4.0**.
 * **Model Weights & Codebooks:** Governed by the **RELIC Open RAIL-M License** (Strict biosecurity use restrictions apply. See `checkpoints/LICENSE.txt`).

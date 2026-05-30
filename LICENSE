@@ -1,15 +1,20 @@
-Creative Commons Attribution 4.0 International (CC BY 4.0)
-
-This work (including datasets, evolutionary matrices, and CASA tracking data) is licensed under a Creative Commons Attribution 4.0 International License.
-
-You are free to:
-- Share: copy and redistribute the material in any medium or format
-- Adapt: remix, transform, and build upon the material for any purpose, even commercially.
-
-Under the following terms:
-- Attribution: You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
-- No additional restrictions: You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
-
-Full Legal Code: https://creativecommons.org/licenses/by/4.0/legalcode
-
+ProtWord Academic and Non-Commercial Research License
 Copyright (c) 2026 Zhengyang Guo (Tsinghua University)
+
+1. Grant of License
+Subject to the terms and conditions of this License, the authors grant you a non-exclusive, royalty-free, worldwide license to use, reproduce, and modify the ProtWord software and its source code ("the Software") strictly for NON-COMMERCIAL, ACADEMIC RESEARCH PURPOSES ONLY.
+
+2. Commercial Use Restriction
+You may NOT use the Software, its derivatives, or its outputs for any commercial purposes. "Commercial purposes" include, but are not limited to:
+(a) Using the Software to design, discover, or optimize therapeutic proteins, drugs, or diagnostics for commercial development.
+(b) Selling, leasing, or providing the Software as a paid service (e.g., SaaS).
+(c) Using the Software within a for-profit entity, unless explicitly restricted to internal, non-commercial exploratory research.
+
+3. Patent Pending Notice
+The algorithms, architectures, and methods implemented in this Software are the subject of pending patent applications filed by the authors and/or their affiliated institutions. Nothing in this license shall be construed as granting you, by implication or otherwise, any commercial patent rights.
+
+4. Commercial Licensing
+If you wish to use the Software for commercial purposes, you must obtain a separate commercial license. Please contact the authors (guozy23@mails.tsinghua.edu.cn) to discuss commercial licensing terms.
+
+5. Disclaimer of Warranty
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM THE USE OF THE SOFTWARE.

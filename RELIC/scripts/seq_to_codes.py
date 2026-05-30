@@ -6,9 +6,9 @@ import sys
 import os
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from protword.vq import ProteinVQAutoencoder, TransformerAdapter, TransformerDecoderAdapter, ResidualVectorQuantizer, \
+from relic.vq import ProteinVQAutoencoder, TransformerAdapter, TransformerDecoderAdapter, ResidualVectorQuantizer, \
     HybridDecoder
-from protword.encoder import HybridEncoder
+from relic.encoder import HybridEncoder
 
 
 def load_vq_model(encoder_ckpt, vq_ckpt, device, alphabet):

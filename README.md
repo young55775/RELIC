@@ -1,6 +1,6 @@
 # 🧬 RELIC: Hierarchical Latent Representations for Protein Functional Discovery and Design
 
-[![License: OpenRAIL-M](https://img.shields.io/badge/License-OpenRAIL--M-red.svg)](#-license--biosecurity)
+[![License: OpenRAIL++-M](https://img.shields.io/badge/License-OpenRAIL--M-red.svg)](#-license--biosecurity)
 [![Parameters](https://img.shields.io/badge/Parameters-150M-blue.svg)]()
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18640019.svg)](https://doi.org/10.5281/zenodo.20461149)
 

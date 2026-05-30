@@ -155,13 +155,13 @@ torchrun --nproc_per_node=4 genome_embedding.py \
 The final results are exported as a ranked CSV table.
 
 #### Usage
-
+```
 python seq_align.py \
     -s MTEITAAMVKELRESTGAGMMDCKNALSETQHEK \
     -p model.pt \
     -e genome_embeddings.h5 \
     -o results.csv
-
+```
 #### Arguments
 | Argument             | Description                                           |
 | -------------------- | ----------------------------------------------------- |
@@ -198,13 +198,13 @@ Output file: `example_embeddings.h5`
 ```
 ### Step 2: Search Similar Sequences
 Run:
-
+```
 python scripts/seq_align.py \
     -s MATTALQTIDTHHSGNIHDAQLDYYGKKLATASSDCKINIFEVVGDSHHNQLDSLSGHDGPVWQVGWAHPKFGVLLAS \
     -p ../RELIC_ckpt/encoder_t12_150M.pth \
     -e example_embeddings.h5 \
     -o search_results.csv
-
+```
 Output file: `search_results.csv`
 
 #### Example Result Table

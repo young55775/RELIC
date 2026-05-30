@@ -240,9 +240,9 @@ If you find our model, representations, or the experimental discovery datasets u
 }
 ```
 ## ⚠️ License & Commercial Use
-* **Experimental Data:** Released under **CC BY 4.0**.
-* **Model Weights & Codebooks:** Governed by the **RELIC Open RAIL-M License** (Strict biosecurity use restrictions apply. See `checkpoints/LICENSE.txt`).
-* **Source Code:** Released under the **RELIC Academic and Non-Commercial Research License**. 
+* **Experimental Data:** Released under **CC BY 4.0** (See `RELIC_data/LICENSE`).
+* **Model Weights & Codebooks:** Governed by the **RELIC Open RAIL++-M License** (Strict biosecurity use restrictions apply. See `RELIC_ckpt/LICENSE`).
+* **Source Code:** Released under the **RELIC Academic and Non-Commercial Research License** (See `LICENSE`). 
 
 **Patent Notice:** The core methods and architectures implemented in RELIC/ProtWord are protected by pending patent applications. The source code is freely available for **academic and non-commercial research only**. 
 

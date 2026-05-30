@@ -1,4 +1,4 @@
-# 🧬 RELIC & ProtWord: Hierarchical Latent Representations for Protein Functional Discovery and Design
+# 🧬 RELIC: Hierarchical Latent Representations for Protein Functional Discovery and Design
 
 [![License: OpenRAIL-M](https://img.shields.io/badge/License-OpenRAIL--M-red.svg)](#-license--biosecurity)
 [![Parameters](https://img.shields.io/badge/Parameters-150M-blue.svg)]()
@@ -16,7 +16,7 @@ To capture these intermediate organizational features directly from primary sequ
 2. **Discrete Vocabulary (ProtWords):** A VQ-VAE quantizes this continuous latent landscape into a learnable codebook of **8,192 context-dependent latent protein states**. Rather than rigid sequence motifs, ProtWords encode recurrent physicochemical environments whose final amino acid realization depends on the broader structural context.
 3. **Latent Generation (Latent GPT):** An autoregressive transformer trained directly on this compressed, discrete vocabulary. It learns the combinatorial grammar of protein architecture, simultaneously constraining global organization and local sequence environments.
 
-![ProtWord Architecture](images/Figure1.png)
+![RELIC Architecture](images/Figure1.png)
 *Figure 1: The RELIC framework and ProtWord discretization. From hierarchical continuous modeling to discrete evolutionary protein words, and finally to a de novo protein generator.*
 
 ### 🎨 Generative Design in Latent Space
@@ -36,7 +36,7 @@ We demonstrate the discovery potential of this semantic axis across two major ap
 ## 📂 Repository Structure
 
 Due to GitHub's file size limits, massive matrices, evaluation datasets, and model weights (**6GB+**) are hosted on Zenodo. 
-
+```
 .
 ├── RELIC_data/            # Empty on GitHub (Download plot data from Zenodo)
 ├── RELIC_ckpt/            # Empty on GitHub (Download weights from Zenodo)
@@ -46,67 +46,67 @@ Due to GitHub's file size limits, massive matrices, evaluation datasets, and mod
     ├── data/              # Empty on GitHub (Evaluation datasets from Zenodo)
     ├── relic/             # Core Neural Network Modules (Encoder, VQ, GPT)
     └── scripts/           # Ready-to-use inference scripts
-
+```
 ---
 
 ## 🛠️ Installation & Requirements
 
 Ensure you have Anaconda/Miniconda installed. 
 
-# 1. Clone the repository
-git clone https://github.com/young55775/ProtWord.git
-cd ProtWord
+## 1. Clone the repository
+git clone https://github.com/young55775/RELIC.git
+cd RELIC
 
-# 2. Create conda environment
-conda create -n protword python=3.11
-conda activate protword
+## 2. Create conda environment
+conda create -n relic python=3.11
+conda activate relic
 
-# 3. Install PyTorch (Adjust CUDA version if necessary for your hardware)
+## 3. Install PyTorch (Adjust CUDA version if necessary for your hardware)
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 
-# 4. Install required dependencies
+## 4. Install required dependencies
 pip install fair-esm biopython seaborn matplotlib tqdm numpy scipy scikit-learn numba h5py pandas
 
-# 5. Download Weights
-# Download `checkpoints.zip` from our Zenodo repository and extract it into `ProtWord/checkpoints/`
+## 5. Download Weights
+### Download `checkpoints.zip` from our Zenodo repository and extract it into `RELIC_ckpt`
 
 ---
 
 ## 🚀 Quick Start / Usage
 
-We provide several out-of-the-box scripts for inference and analysis. **Please run all commands from inside the `ProtWord/` directory.**
+We provide several out-of-the-box scripts for inference and analysis. **Please run all commands from inside the `RELIC/` directory.**
 
-cd ProtWord
+cd RELIC
 
 ### 1. Discretize Sequence to VQ Codes (ProtWords)
 Convert a natural protein sequence into its compressed, discrete "protein words" (latent tokens).
-
+```
 python scripts/seq_to_codes.py \
-    --encoder_ckpt ./checkpoints/encoder_t12_150M.pth \
-    --vq_ckpt ./checkpoints/vqvae_8192.pth \
+    --encoder_ckpt ../RELIC_ckpt/encoder_t12_150M.pth \
+    --vq_ckpt ../RELIC_ckpt/vqvae_8192.pth \
     --seq "MSLLSRVRRFKVFVD"
-
+```
 ### 2. Generative Design (Latent GPT)
 Let the Latent GPT model dream up new protein sequences based on the 8,192-token discrete codebook. 
 
 **Option A: Pure Unconditional Generation** (Explore the natural protein manifold)
-
+```
 python scripts/gpt_sample.py \
-    --gpt_ckpt ./checkpoints/gpt_8192.pth \
-    --vq_ckpt ./checkpoints/vqvae_8192.pth \
+    --gpt_ckpt ../RELIC_ckpt/gpt_8192.pth \
+    --vq_ckpt ../RELIC_ckpt/vqvae_8192.pth \
     --similarity_threshold 0.4 \
     --num_samples 100 \
     --top_k 50 --top_p 0.95 --temperature 1.0
-
+```
 **Option B: Family-Specific Generation** (e.g., *de novo* Cofilin variants)
-
+```
 python scripts/gpt_sample.py \
     --gpt_ckpt ./checkpoints/cofilin.pth \
     --vq_ckpt ./checkpoints/vqvae_8192.pth \
     --similarity_threshold 0.6 \
     --num_samples 100 \
     --top_k 50 --top_p 0.95 --temperature 1.0
-
+```
 ---
 
 ## 🔍 Sequence Embedding and Remote Homology Alignment
@@ -124,13 +124,13 @@ These two scripts are used for protein sequence embedding generation and sequenc
 - Outputs compressed HDF5 embedding database
 
 #### Usage
-
+```
 torchrun --nproc_per_node=4 genome_embedding.py \
     -i proteome.fasta \
-    -p model.pt \
+    -p ../RELIC_ckpt/encoder_t12_150M.pth \
     -o genome_embeddings.h5 \
     -b 16
-
+```
 #### Arguments
 | Argument              | Description                                    |
 | --------------------- | ---------------------------------------------- |

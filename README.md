@@ -54,19 +54,23 @@ Due to GitHub's file size limits, massive matrices, evaluation datasets, and mod
 Ensure you have Anaconda/Miniconda installed. 
 
 ## 1. Clone the repository
+```
 git clone https://github.com/young55775/RELIC.git
 cd RELIC
-
+```
 ## 2. Create conda environment
+```
 conda create -n relic python=3.11
 conda activate relic
-
+```
 ## 3. Install PyTorch (Adjust CUDA version if necessary for your hardware)
+```
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
-
+```
 ## 4. Install required dependencies
+```
 pip install fair-esm biopython seaborn matplotlib tqdm numpy scipy scikit-learn numba h5py pandas
-
+```
 ## 5. Download Weights
 ### Download `checkpoints.zip` from our Zenodo repository and extract it into `RELIC_ckpt` 10.5281/zenodo.20461149
 

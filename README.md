@@ -72,7 +72,7 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 pip install fair-esm biopython seaborn matplotlib tqdm numpy scipy scikit-learn numba h5py pandas
 ```
 ## 5. Download Weights
-### Download `checkpoints.zip` from our Zenodo repository and extract it into `RELIC_ckpt` 10.5281/zenodo.20461149
+### Download `checkpoints.zip` from our Zenodo repository and extract it into `RELIC_ckpt` [10.5281/zenodo.20461149](https://doi.org/10.5281/zenodo.20461149)
 
 ---
 
